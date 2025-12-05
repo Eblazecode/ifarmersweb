@@ -71,9 +71,9 @@ const ContactPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-[#2D5016] mb-4">Contact Information</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3"><Phone className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Phone</p><p className="text-gray-600">+254 700 123 456</p></div></li>
-                  <li className="flex items-start space-x-3"><Mail className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Email</p><p className="text-gray-600">info@ifarmers.co.ke</p></div></li>
-                  <li className="flex items-start space-x-3"><MapPin className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Address</p><p className="text-gray-600">Westlands, Nairobi, Kenya</p></div></li>
-                  <li className="flex items-start space-x-3"><Clock className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Hours</p><p className="text-gray-600">Mon-Fri: 8am - 5pm</p></div></li>
+                  <li className="flex items-start space-x-3"><Mail className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Email</p><p className="text-gray-600">info@ifarmerslimited.com</p></div></li>
+                  <li className="flex items-start space-x-3"><MapPin className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Address</p><p className="text-gray-600">Central Business District, Abuja</p></div></li>
+                  <li className="flex items-start space-x-3"><Clock className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Hours</p><p className="text-gray-600">Mon-Fri: 8am - 6pm</p></div></li>
                 </ul>
               </div>
 
