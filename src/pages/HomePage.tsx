@@ -1,0 +1,71 @@
+import React from 'react';
+import { Beaker, Package, ClipboardList, Monitor } from 'lucide-react';
+import HeroSlider from '@/components/HeroSlider';
+import ServiceCard from '@/components/ServiceCard';
+import ImpactStats from '@/components/ImpactStats';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import Testimonials from '@/components/Testimonials';
+import CTASection from '@/components/CTASection';
+import Newsletter from '@/components/Newsletter';
+
+const services = [
+  {
+    icon: <Beaker className="h-7 w-7" />,
+    title: 'Fertilizer Blending',
+    description: 'Custom NPK formulations tailored to your specific soil and crop requirements.',
+    image: 'https://d64gsuwffb70l.cloudfront.net/692e6b896dea5f3608504ed6_1764649956214_0a045282.webp',
+    link: '/services'
+  },
+  {
+    icon: <Package className="h-7 w-7" />,
+    title: 'Input Supply',
+    description: 'Quality seeds, fertilizers, chemicals, and farming tools from trusted brands.',
+    image: 'https://d64gsuwffb70l.cloudfront.net/692e6b896dea5f3608504ed6_1764649958165_0c643f7a.webp',
+    link: '/services'
+  },
+  {
+    icon: <ClipboardList className="h-7 w-7" />,
+    title: 'Project Management',
+    description: 'End-to-end agricultural project planning, execution, and monitoring.',
+    image: 'https://d64gsuwffb70l.cloudfront.net/692e6b896dea5f3608504ed6_1764649959108_f4bc7b5f.webp',
+    link: '/services'
+  },
+  {
+    icon: <Monitor className="h-7 w-7" />,
+    title: 'Agri Software',
+    description: 'Smart farm management software for data-driven agricultural decisions.',
+    image: 'https://d64gsuwffb70l.cloudfront.net/692e6b896dea5f3608504ed6_1764649957169_eb6b50d3.webp',
+    link: '/services'
+  },
+];
+
+const HomePage: React.FC = () => {
+  return (
+    <div>
+      <HeroSlider />
+      
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2D5016] mb-4">Welcome to iFarmers Limited</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">We are a leading agricultural solutions provider dedicated to empowering farmers across Africa with innovative technologies, quality inputs, and expert guidance for sustainable farming success.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <ServiceCard key={index} {...service} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <ImpactStats />
+      <WhyChooseUs />
+      <Testimonials />
+      <Newsletter />
+      <CTASection />
+    </div>
+  );
+};
+
+export default HomePage;
