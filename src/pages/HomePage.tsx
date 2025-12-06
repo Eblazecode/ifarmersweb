@@ -1,3 +1,4 @@
+// src/pages/HomePage.tsx
 import React from 'react';
 import { Beaker, Package, ClipboardList, Monitor } from 'lucide-react';
 import HeroSlider from '@/components/HeroSlider';
@@ -7,6 +8,20 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import Testimonials from '@/components/Testimonials';
 import CTASection from '@/components/CTASection';
 import Newsletter from '@/components/Newsletter';
+import Gallery, { ImageItem } from '@/components/Gallery';
+
+// import local images (using the @ alias to src)
+import hero1 from '@/assets/gallery/gallery1.jpeg';
+import hero2 from '@/assets/gallery/gallery2.jpeg';
+import chinedu from '@/assets/gallery/gallery3.jpeg';
+import ngozi from '@/assets/gallery/gallery4.jpeg';
+
+const IMAGES: ImageItem[] = [
+  { src: hero1, alt: 'Farmer in field', caption: 'Farm visit — Enugu', tag: 'fields' },
+  { src: hero2, alt: 'Woman farmer', caption: 'Rice farm — Kebbi', tag: 'people' },
+  { src: chinedu, alt: 'Chinedu Okeke', caption: 'Cassava Farmer — Enugu', tag: 'people' },
+  { src: ngozi, alt: 'Ngozi Umeh', caption: 'Vegetable Farmer — Imo', tag: 'people' },
+];
 
 const services = [
   {
@@ -41,30 +56,35 @@ const services = [
 
 const HomePage: React.FC = () => {
   return (
-    <div>
-      <HeroSlider />
-      
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2D5016] mb-4">Welcome to iFarmers Limited</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">We are a leading agricultural solutions provider dedicated to empowering farmers across Africa with innovative technologies, quality inputs, and expert guidance for sustainable farming success.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <div>
+        <HeroSlider />
 
-      <ImpactStats />
-      <WhyChooseUs />
-      <Testimonials />
-      <Newsletter />
-      <CTASection />
-    </div>
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2D5016] mb-4">Welcome to iFarmers Limited</h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                We are a leading agricultural solutions provider dedicated to empowering farmers across Africa with innovative technologies, quality inputs, and expert guidance for sustainable farming success.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                  <ServiceCard key={index} {...service} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <ImpactStats />
+        <WhyChooseUs />
+        <Testimonials />
+        <Newsletter />
+        <CTASection />
+
+        {/* Pass local images into the reusable Gallery component */}
+        <Gallery images={IMAGES} initialFilter="all" />
+      </div>
   );
 };
 

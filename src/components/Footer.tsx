@@ -56,10 +56,10 @@ const Footer: React.FC = () => {
               <h4 className="font-semibold mb-4">Contact Info</h4>
               <ul className="space-y-3 text-sm text-gray-300">
                 <li className="flex items-center space-x-2">
-                  <Phone className="h-4 w-4" /><span>+254 700 123 456</span>
+                  <Phone className="h-4 w-4" /><span> 0904 605 0154</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <Mail className="h-4 w-4" /><span>info@ifarmers.com</span>
+                  <Mail className="h-4 w-4" /><span>info@ifarmerslimited.com</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <MapPin className="h-4 w-4 mt-1" /><span>Abuja, Nigeria</span>

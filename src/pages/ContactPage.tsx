@@ -70,7 +70,8 @@ const ContactPage: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold text-[#2D5016] mb-4">Contact Information</h3>
                 <ul className="space-y-4">
-                  <li className="flex items-start space-x-3"><Phone className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Phone</p><p className="text-gray-600">+254 700 123 456</p></div></li>
+                  <li className="flex items-start space-x-3"><Phone className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Phone</p><p className="text-gray-600">+234 904 605 0154
+                  </p></div></li>
                   <li className="flex items-start space-x-3"><Mail className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Email</p><p className="text-gray-600">info@ifarmerslimited.com</p></div></li>
                   <li className="flex items-start space-x-3"><MapPin className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Address</p><p className="text-gray-600">Central Business District, Abuja</p></div></li>
                   <li className="flex items-start space-x-3"><Clock className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Hours</p><p className="text-gray-600">Mon-Fri: 8am - 6pm</p></div></li>
@@ -99,9 +100,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="h-96 bg-gray-200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.277444357954!2d36.78796!3d-1.2635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173c0a1f9de7%3A0xad2c84df1f7f2ec9!2sWestlands%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1701500000000!5m2!1sen!2ske" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" title="iFarmers Location" />
-      </section>
+
     </div>
   );
 };
