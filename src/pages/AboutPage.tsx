@@ -14,6 +14,42 @@ import {
   CheckCircle,
 } from 'lucide-react';
 
+/**
+ * SafeImg helper: uses src, but falls back to a neutral inline SVG if the image 404s.
+ * This prevents broken external image requests from leaving empty broken icons and
+ * avoids noisy errors in the console when remotes are unavailable.
+ */
+const PLACEHOLDER_SVG =
+    'data:image/svg+xml;utf8,' +
+    encodeURIComponent(
+        `<svg xmlns='http://www.w3.org/2000/svg' width='320' height='240' viewBox='0 0 320 240'>
+      <rect width='100%' height='100%' fill='#F3F7EF'/>
+      <g fill='#9BAF88' transform='translate(60,40)'>
+        <circle cx='40' cy='40' r='36' />
+        <rect x='0' y='90' width='160' height='80' rx='8' />
+      </g>
+    </svg>`
+    );
+
+const SafeImg: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = (props) => {
+  const { src, alt = '', ...rest } = props;
+  return (
+      <img
+          src={src}
+          alt={alt}
+          {...rest}
+          onError={(e) => {
+            const target = e.currentTarget;
+            // prevent infinite loop if placeholder somehow errors
+            if (target.getAttribute('data-fallback') !== 'true') {
+              target.setAttribute('data-fallback', 'true');
+              target.src = PLACEHOLDER_SVG;
+            }
+          }}
+      />
+  );
+};
+
 const team = [
   {
     name: 'Dr. James Mwangi',
@@ -159,7 +195,6 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Certifications */}
         {/* Modern Certifications & Compliance */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
@@ -168,8 +203,6 @@ const AboutPage: React.FC = () => {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-              {/* FISS */}
               <div className="bg-[#F5F5DC] rounded-xl p-6 shadow-sm hover:shadow-md transition">
                 <div className="flex items-center gap-3 mb-3">
                   <Shield className="h-7 w-7 text-[#7CB342]" />
@@ -180,7 +213,6 @@ const AboutPage: React.FC = () => {
                 </p>
               </div>
 
-              {/* NESREA */}
               <div className="bg-[#F5F5DC] rounded-xl p-6 shadow-sm hover:shadow-md transition">
                 <div className="flex items-center gap-3 mb-3">
                   <Globe className="h-7 w-7 text-[#7CB342]" />
@@ -191,7 +223,6 @@ const AboutPage: React.FC = () => {
                 </p>
               </div>
 
-              {/* CropLife Nigeria */}
               <div className="bg-[#F5F5DC] rounded-xl p-6 shadow-sm hover:shadow-md transition">
                 <div className="flex items-center gap-3 mb-3">
                   <Leaf className="h-7 w-7 text-[#7CB342]" />
@@ -202,7 +233,6 @@ const AboutPage: React.FC = () => {
                 </p>
               </div>
 
-              {/* OFPSAN */}
               <div className="bg-[#F5F5DC] rounded-xl p-6 shadow-sm hover:shadow-md transition">
                 <div className="flex items-center gap-3 mb-3">
                   <Award className="h-7 w-7 text-[#7CB342]" />
@@ -212,11 +242,9 @@ const AboutPage: React.FC = () => {
                   Certified organic fertilizer producer & supplier meeting national quality standards.
                 </p>
               </div>
-
             </div>
           </div>
         </section>
-
 
         {/* Services */}
         <section className="py-12 bg-[#F5FFF6]">
@@ -294,38 +322,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-
-        {/* Leadership Team
-        <section className="py-16 bg-[#F5F5DC]">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-[#2D5016] text-center mb-12">Leadership Team</h2>
-            <div className="grid md:grid-cols-4 gap-8">
-              {team.map((member, i) => (
-                  <div key={i} className="text-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                    <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-[#7CB342]" />
-                    <h3 className="font-bold text-[#2D5016]">{member.name}</h3>
-                    <p className="text-sm text-gray-600">{member.role}</p>
-                  </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
-        {/* Certifications quick view
-        <section className="py-12 bg-white">
-          <div className="max-w-5xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-[#2D5016] mb-6">Certifications & Compliance</h2>
-            <div className="flex flex-wrap justify-center gap-6">
-              {certifications.map((c, i) => (
-                  <div key={i} className="flex items-center space-x-2 bg-[#F5F5DC] px-6 py-4 rounded-lg shadow">
-                    <Shield className="h-6 w-6 text-[#7CB342]" />
-                    <span className="font-medium">{c}</span>
-                  </div>
-              ))}
-            </div>
-          </div>
-        </section>*/}
       </div>
   );
 };
