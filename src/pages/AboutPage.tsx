@@ -158,23 +158,120 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Achievements */}
+        {/* Achievements (modernized) */}
         <section className="py-12 bg-white">
-          <div className="max-w-5xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-[#2D5016] mb-6">Achievements</h2>
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2D5016] mb-8">Achievements</h2>
 
-            <div className="bg-[#F9FFF4] border border-[#E6F6DA] p-6 rounded-lg shadow-sm">
-              <p className="mb-4 text-gray-700">
-                <strong>Supplied in 2023/2024 and 2025 dry and wet season programs</strong> by Nations Agricultural Growth Scheme and Agro Pocket.
-              </p>
+            <div className="grid gap-8 lg:grid-cols-2 items-start">
+              {/* Left: description + highlights */}
+              <div className="space-y-4">
+                <div className="bg-[#F9FFF4] border border-[#E6F6DA] p-6 rounded-xl shadow-sm">
+                  <h3 className="text-lg font-semibold text-[#2D5016] mb-2">
+                    Supplied in 2023 / 2024 / 2025 programs
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    Participated in national dry & wet season programs under the Nations Agricultural Growth Scheme and Agro Pocket —
+                    delivering inputs and technical support across multiple states to strengthen food security.
+                  </p>
 
-              <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-4">
-                <li><strong>Nationwide Reach:</strong> We have successfully supplied our products to <strong>23 states</strong> in Nigeria, supporting farmers across the country.</li>
-                <li><strong>Government Intervention Programs:</strong> Participated in government intervention programs, demonstrating our commitment to agricultural development and food security.</li>
-                <li><strong>Quality Products:</strong> Formulated to meet the specific needs of Nigerian farmers, ensuring optimal crop yields and soil health.</li>
-                <li><strong>Train-the-Trainer:</strong> Delivered a <strong>Train the Trainer</strong> program across <strong>37 states</strong> for the AFAN ICT project.</li>
-              </ul>
+                  <ul className="list-none space-y-2">
+                    <li className="flex items-start gap-3">
+                      <span className="inline-block mt-1 w-3 h-3 bg-[#7CB342] rounded-full" />
+                      <span className="text-gray-700"><strong>Nationwide Reach:</strong> Supplied products to <strong>23 states</strong> in Nigeria.</span>
+                    </li>
 
-              <p className="text-sm text-gray-600">Programs supplied: dry & wet season support under national schemes (2023, 2024 and 2025).</p>
+                    <li className="flex items-start gap-3">
+                      <span className="inline-block mt-1 w-3 h-3 bg-[#7CB342] rounded-full" />
+                      <span className="text-gray-700"><strong>Government Programs:</strong> Active partner in intervention & growth schemes.</span>
+                    </li>
+
+                    <li className="flex items-start gap-3">
+                      <span className="inline-block mt-1 w-3 h-3 bg-[#7CB342] rounded-full" />
+                      <span className="text-gray-700"><strong>Quality Products:</strong> Formulations tailored for Nigerian soils and crops.</span>
+                    </li>
+
+                    <li className="flex items-start gap-3">
+                      <span className="inline-block mt-1 w-3 h-3 bg-[#7CB342] rounded-full" />
+                      <span className="text-gray-700"><strong>Train-the-Trainer:</strong> Delivered AFAN ICT trainer program across <strong>37 states</strong>.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Program badges / quick note */}
+                <div className="flex flex-wrap gap-3">
+          <span className="inline-flex items-center gap-2 bg-[#EAF7E6] text-[#2D5016] px-3 py-1 rounded-full text-sm shadow-sm">
+            <strong>Program:</strong> Nations Agricultural Growth Scheme
+          </span>
+
+                  <span className="inline-flex items-center gap-2 bg-[#EAF7E6] text-[#2D5016] px-3 py-1 rounded-full text-sm shadow-sm">
+            <strong>Partner:</strong> Agro Pocket
+          </span>
+
+                  <span className="inline-flex items-center gap-2 bg-[#FFF8E6] text-[#2D5016] px-3 py-1 rounded-full text-sm shadow-sm">
+            <strong>Seasons:</strong> Dry & Wet (2023, 2024, 2025)
+          </span>
+                </div>
+              </div>
+
+              {/* Right: stats cards + timeline */}
+              <div className="space-y-6">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-5 bg-white border rounded-xl shadow-sm hover:shadow-md transition">
+                    <div className="text-sm text-gray-500">States Reached</div>
+                    <div className="mt-2 text-3xl font-bold text-[#2D5016]">23</div>
+                    <div className="text-xs text-gray-400 mt-1">Across Nigeria</div>
+                  </div>
+
+                  <div className="p-5 bg-white border rounded-xl shadow-sm hover:shadow-md transition">
+                    <div className="text-sm text-gray-500">Farmers Supported</div>
+                    <div className="mt-2 text-3xl font-bold text-[#2D5016]">50k+</div>
+                    <div className="text-xs text-gray-400 mt-1">Cumulative outreach</div>
+                  </div>
+
+                  <div className="p-5 bg-white border rounded-xl shadow-sm hover:shadow-md transition">
+                    <div className="text-sm text-gray-500">Programs</div>
+                    <div className="mt-2 text-3xl font-bold text-[#2D5016]">3</div>
+                    <div className="text-xs text-gray-400 mt-1">National season programs</div>
+                  </div>
+
+                  <div className="p-5 bg-white border rounded-xl shadow-sm hover:shadow-md transition">
+                    <div className="text-sm text-gray-500">Trainer Coverage</div>
+                    <div className="mt-2 text-3xl font-bold text-[#2D5016]">37</div>
+                    <div className="text-xs text-gray-400 mt-1">States reached with AFAN ICT</div>
+                  </div>
+                </div>
+
+                {/* timeline / horizontal list */}
+                <div className="bg-[#FAFFF7] border border-[#E6F6DA] rounded-lg p-4">
+                  <div className="flex items-center justify-between text-sm text-gray-600 mb-3">
+                    <div className="font-medium text-[#2D5016]">Seasonal Programs</div>
+                    <div className="text-xs text-gray-400">2023 — 2025</div>
+                  </div>
+
+                  <div className="flex items-center gap-3 overflow-x-auto py-2">
+                    <div className="flex-shrink-0 p-3 bg-white border rounded-lg shadow-sm">
+                      <div className="text-sm font-semibold text-[#2D5016]">2023</div>
+                      <div className="text-xs text-gray-500 mt-1">Dry & Wet — Growth Scheme</div>
+                    </div>
+
+                    <div className="flex-shrink-0 p-3 bg-white border rounded-lg shadow-sm">
+                      <div className="text-sm font-semibold text-[#2D5016]">2024</div>
+                      <div className="text-xs text-gray-500 mt-1">Dry & Wet — Agro Pocket</div>
+                    </div>
+
+                    <div className="flex-shrink-0 p-3 bg-white border rounded-lg shadow-sm">
+                      <div className="text-sm font-semibold text-[#2D5016]">2025</div>
+                      <div className="text-xs text-gray-500 mt-1">Ongoing national deployments</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA small */}
+                <div className="text-sm text-gray-600">
+                  <strong>Note:</strong> These achievements reflect program deliveries and trainer capacity building in collaboration with government and private partners.
+                </div>
+              </div>
             </div>
           </div>
         </section>
