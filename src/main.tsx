@@ -3,5 +3,6 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 
-// Remove dark mode class addition
+console.log("[v0] App starting...")
+
 createRoot(document.getElementById("root")!).render(<App />);
