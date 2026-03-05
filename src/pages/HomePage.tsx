@@ -10,17 +10,11 @@ import CTASection from '@/components/CTASection';
 import Newsletter from '@/components/Newsletter';
 import Gallery, { ImageItem } from '@/components/Gallery';
 
-// import local images (using the @ alias to src)
-import hero1 from '@/assets/gallery/gallery1.jpeg';
-import hero2 from '@/assets/gallery/gallery2.jpeg';
-import chinedu from '@/assets/gallery/gallery3.jpeg';
-import ngozi from '@/assets/gallery/gallery4.jpeg';
-
 const IMAGES: ImageItem[] = [
-  { src: hero1, alt: 'Farmer in field', caption: 'Farm visit — Enugu', tag: 'fields' },
-  { src: hero2, alt: 'Woman farmer', caption: 'Rice farm — Kebbi', tag: 'people' },
-  { src: chinedu, alt: 'Chinedu Okeke', caption: 'Cassava Farmer — Enugu', tag: 'people' },
-  { src: ngozi, alt: 'Ngozi Umeh', caption: 'Vegetable Farmer — Imo', tag: 'people' },
+  { src: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&h=400&fit=crop', alt: 'Farmer in field', caption: 'Farm visit — Enugu', tag: 'fields' },
+  { src: 'https://images.unsplash.com/photo-1589923188651-268a9765e432?w=600&h=400&fit=crop', alt: 'Woman farmer', caption: 'Rice farm — Kebbi', tag: 'people' },
+  { src: 'https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&h=400&fit=crop', alt: 'Chinedu Okeke', caption: 'Cassava Farmer — Enugu', tag: 'people' },
+  { src: 'https://images.unsplash.com/photo-1595928796655-da1bfc322c6b?w=600&h=400&fit=crop', alt: 'Ngozi Umeh', caption: 'Vegetable Farmer — Imo', tag: 'people' },
 ];
 
 const services = [

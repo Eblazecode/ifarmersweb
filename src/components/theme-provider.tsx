@@ -1,8 +1,5 @@
-"use client"
-
 import * as React from "react"
 import { createContext, useContext, useEffect, useState } from "react"
-import { ThemeProviderProps } from "next-themes/dist/types"
 
 type Theme = "dark" | "light" | "system"
 
@@ -11,12 +8,17 @@ type ThemeContextType = {
   setTheme: (theme: Theme) => void
 }
 
+interface ThemeProviderProps {
+  children: React.ReactNode
+  defaultTheme?: Theme
+  storageKey?: string
+}
+
 const ThemeContext = createContext<ThemeContextType | null>(null)
 
 export function ThemeProvider({
   children,
   defaultTheme = "system",
-  value: _value,
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {

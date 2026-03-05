@@ -2,37 +2,30 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// LOCAL HERO IMAGES
-import hero1 from '../assets/hero/hero1.jpg';
-import hero2 from '../assets/hero/hero2.webp';
-import hero3 from '../assets/hero/hero3.jpg';
-import hero4 from '../assets/hero/hero4.webp';
-import hero5 from '../assets/hero/hero5.webp';
-
 const slides = [
   {
-    image: hero1,
+    image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1200&h=800&fit=crop',
     title: 'Innovating Agriculture for a Sustainable Future',
     subtitle: 'Precision solutions for modern farming across Africa.',
     cta: 'Explore Services',
     link: '/services'
   },
   {
-    image: hero2,
+    image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1200&h=800&fit=crop',
     title: 'Premium Fertilizer Blending Solutions',
     subtitle: 'Custom NPK formulations designed for your soil needs.',
     cta: 'Request Custom Blend',
     link: '/contact'
   },
   {
-    image: hero5,
+    image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&h=800&fit=crop',
     title: 'Reliable Input Supply for Farmers',
     subtitle: 'Seeds, fertilizers, chemicals, tools, and more.',
     cta: 'Request a Quote',
     link: '/contact'
   },
   {
-    image: hero4,
+    image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1200&h=800&fit=crop',
     title: 'Agri Software for Smarter Decisions',
     subtitle: 'Farm management, monitoring, and analytics in one platform.',
     cta: 'Request a Demo',
