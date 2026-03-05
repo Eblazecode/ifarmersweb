@@ -26,7 +26,7 @@ const CTASection: React.FC = () => {
             Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
           <a 
-            href="tel:+254700123456"
+            href="tel:+2349046050154"
             className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-[#2D5016] font-semibold px-8 py-4 rounded-lg transition-colors"
           >
             <Phone className="mr-2 h-5 w-5" /> Call Us Now

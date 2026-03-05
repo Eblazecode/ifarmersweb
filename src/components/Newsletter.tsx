@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Send } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/components/ui/use-toast';
 
 const Newsletter: React.FC = () => {
   const { toast } = useToast();

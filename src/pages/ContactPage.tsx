@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle, PhoneCall } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/components/ui/use-toast';
 
 const ContactPage: React.FC = () => {
   const { toast } = useToast();
@@ -78,7 +78,7 @@ const ContactPage: React.FC = () => {
                 </ul>
               </div>
 
-              <a href="https://wa.me/254700123456" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-4 rounded-lg transition-colors w-full">
+              <a href="https://wa.me/2349046050154" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-4 rounded-lg transition-colors w-full">
                 <MessageCircle className="h-5 w-5" /><span>Chat on WhatsApp</span>
               </a>
 
