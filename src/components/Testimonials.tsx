@@ -2,14 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
-// Import local placeholder images (make sure these files exist)
-import user1 from '../assets/testimonials/user1.webp';
-import user2 from '../assets/testimonials/user2.webp';
-import user3 from '../assets/testimonials/user3.jpg';
-import user4 from '../assets/testimonials/user4.jpg';
-
-// Optional: move BRAND to a global config if you prefer
-const BRAND = 'IFARMERS LIMITED';
+const BRAND = 'Ifarmers Agricultural Products Services Limited';
 
 type Testimonial = {
   name: string;
@@ -22,25 +15,25 @@ const testimonials: Testimonial[] = [
   {
     name: 'Chinedu Okeke',
     role: 'Cassava Farmer, Enugu',
-    image: user1,
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
     text: `${BRAND}'s custom fertilizer blends increased my cassava yield significantly. Their soil analysis solutions are excellent.`
   },
   {
     name: 'Aminat Bello',
     role: 'Rice Farmer, Kebbi',
-    image: user4,
+    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop&crop=face',
     text: `The digital farm management tools from ${BRAND} have helped me track production better and save hours each week.`
   },
   {
     name: 'Yakubu Ibrahim',
     role: 'Maize Farmer, Kaduna',
-    image: user2,
-    text: `Working with ${BRAND} on input supply and agronomy support has greatly improved our cooperative’s performance.`
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face',
+    text: `Working with ${BRAND} on input supply and agronomy support has greatly improved our cooperative's performance.`
   },
   {
     name: 'Ben Umeh',
     role: 'Vegetable Farmer, Imo',
-    image: user3,
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
     text: `Their input supply chain is reliable and the fertilizer quality is consistently high. Highly recommended!`
   },
 ];
