@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-import IFARMERSLOGO from '../assets/IFARMERS.jpg'; // <-- IMPORT LOGO FROM ASSETS
 
 const Footer: React.FC = () => {
   return (
@@ -12,15 +11,14 @@ const Footer: React.FC = () => {
             {/* ---- LOGO SECTION ---- */}
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img
-                    src={IFARMERSLOGO}
-                    alt="Company Logo"
-                    className="h-10 w-auto object-contain"
-                />
+                <div className="h-10 w-10 bg-[#7CB342] rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">iF</span>
+                </div>
+                <span className="text-xl font-bold">Ifarmers</span>
               </div>
 
               <p className="text-gray-300 text-sm">
-                Innovating agriculture for a sustainable future across Africa.
+                Ifarmers Agricultural Products Services Limited - Innovating agriculture for a sustainable future across Africa.
               </p>
 
               <div className="flex space-x-4 mt-4">
@@ -56,20 +54,23 @@ const Footer: React.FC = () => {
               <h4 className="font-semibold mb-4">Contact Info</h4>
               <ul className="space-y-3 text-sm text-gray-300">
                 <li className="flex items-center space-x-2">
-                  <Phone className="h-4 w-4" /><span> 0904 605 0154</span>
+                  <Phone className="h-4 w-4" />
+                  <a href="https://wa.me/2349046050154" target="_blank" rel="noopener noreferrer" className="hover:text-[#7CB342]">
+                    +234 904 605 0154
+                  </a>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Mail className="h-4 w-4" /><span>info@ifarmerslimited.com</span>
                 </li>
                 <li className="flex items-start space-x-2">
-                  <MapPin className="h-4 w-4 mt-1" /><span>Abuja, Nigeria</span>
+                  <MapPin className="h-4 w-4 mt-1" /><span>Amb I Osakwe House, Innerblock Street, Central Business District, Abuja</span>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-600 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 iFarmers Limited. All rights reserved.</p>
+            <p>&copy; 2025 Ifarmers Agricultural Products Services Limited. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import IFARMWERSLOGO from '../assets/IFARMERSLOGO.png'
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,13 +21,12 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
 
-            {/* ---- LOGO PLACEHOLDER HERE ---- */}
+            {/* ---- LOGO ---- */}
             <Link to="/" className="flex items-center space-x-3">
-              <img
-                  src={IFARMWERSLOGO}
-                  alt="IFARMERS Logo"
-                  className="h-12 w-auto object-contain"
-              />
+              <div className="h-10 w-10 bg-[#7CB342] rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">iF</span>
+              </div>
+              <span className="text-xl font-bold text-[#2D5016]">Ifarmers</span>
             </Link>
 
             <nav className="hidden md:flex space-x-8">

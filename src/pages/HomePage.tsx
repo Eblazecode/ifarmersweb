@@ -9,6 +9,7 @@ import Testimonials from '@/components/Testimonials';
 import CTASection from '@/components/CTASection';
 import Newsletter from '@/components/Newsletter';
 import Gallery, { ImageItem } from '@/components/Gallery';
+import AgroCommodityExport from '@/components/AgroCommodityExport';
 
 const IMAGES: ImageItem[] = [
   { src: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&h=400&fit=crop', alt: 'Farmer in field', caption: 'Farm visit — Enugu', tag: 'fields' },
@@ -56,7 +57,7 @@ const HomePage: React.FC = () => {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2D5016] mb-4">Welcome to iFarmers Limited</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2D5016] mb-4">Welcome to Ifarmers Agricultural Products Services Limited</h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
                 We are a leading agricultural solutions provider dedicated to empowering farmers across Africa with innovative technologies, quality inputs, and expert guidance for sustainable farming success.
               </p>
@@ -70,6 +71,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
+        <AgroCommodityExport />
         <ImpactStats />
         <WhyChooseUs />
         <Testimonials />
