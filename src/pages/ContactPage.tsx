@@ -73,14 +73,31 @@ const ContactPage: React.FC = () => {
                   <li className="flex items-start space-x-3"><Phone className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Phone</p><p className="text-gray-600">+234 904 605 0154
                   </p></div></li>
                   <li className="flex items-start space-x-3"><Mail className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Email</p><p className="text-gray-600">info@ifarmerslimited.com</p></div></li>
-                  <li className="flex items-start space-x-3"><MapPin className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Address</p><p className="text-gray-600">Central Business District, Abuja</p></div></li>
+                  <li className="flex items-start space-x-3"><MapPin className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Address</p>       <p className="text-white-700 mb-6">
+                    Amb I Osakwe House <br />
+                    Innerblock Street <br />
+                    Central Business District <br />
+                    Abuja, Nigeria
+                  </p></div></li>
                   <li className="flex items-start space-x-3"><Clock className="h-5 w-5 text-[#7CB342] mt-1" /><div><p className="font-medium">Hours</p><p className="text-gray-600">Mon-Fri: 8am - 6pm</p></div></li>
                 </ul>
               </div>
 
-              <a href="https://wa.me/254700123456" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-4 rounded-lg transition-colors w-full">
-                <MessageCircle className="h-5 w-5" /><span>Chat on WhatsApp</span>
-              </a>
+
+              <div className="text-center">
+
+
+
+                <a
+                    href="https://wa.me/2349046050154"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg"
+                >
+                  Chat With Us on WhatsApp
+                </a>
+
+              </div>
 
               <div className="bg-[#F5F5DC] p-6 rounded-xl">
                 <h4 className="font-bold text-[#2D5016] mb-4 flex items-center"><PhoneCall className="h-5 w-5 mr-2" /> Request a Callback</h4>

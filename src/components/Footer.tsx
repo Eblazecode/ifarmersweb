@@ -62,7 +62,15 @@ const Footer: React.FC = () => {
                   <Mail className="h-4 w-4" /><span>info@ifarmerslimited.com</span>
                 </li>
                 <li className="flex items-start space-x-2">
-                  <MapPin className="h-4 w-4 mt-1" /><span>Abuja, Nigeria</span>
+                  <MapPin className="h-4 w-4 mt-1" /><span>
+
+          <p className="text-white-700 mb-6">
+            Amb I Osakwe House <br />
+            Innerblock Street <br />
+            Central Business District <br />
+            Abuja, Nigeria
+          </p>
+                </span>
                 </li>
               </ul>
             </div>

@@ -16,6 +16,7 @@ import hero2 from '@/assets/gallery/gallery2.jpeg';
 import chinedu from '@/assets/gallery/gallery3.jpeg';
 import ngozi from '@/assets/gallery/gallery4.jpeg';
 
+
 const IMAGES: ImageItem[] = [
   { src: hero1, alt: 'Farmer in field', caption: 'Farm visit — Enugu', tag: 'fields' },
   { src: hero2, alt: 'Woman farmer', caption: 'Rice farm — Kebbi', tag: 'people' },
@@ -64,7 +65,8 @@ const HomePage: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#2D5016] mb-4">Welcome to iFarmers Limited</h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
-                We are a leading agricultural solutions provider dedicated to empowering farmers across Africa with innovative technologies, quality inputs, and expert guidance for sustainable farming success.
+                We are a leading agricultural solutions provider dedicated to empowering farmers across Africa with innovative
+                  technologies, quality inputs, and expert guidance for sustainable farming success.
               </p>
             </div>
 
