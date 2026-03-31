@@ -8,9 +8,16 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.env
+.env.local
+.env.production.local
+.env.development.local
+*.local
+.next
+out
 dist
 dist-ssr
-*.local
+tsconfig.tsbuildinfo
 
 # Editor directories and files
 .vscode/*
